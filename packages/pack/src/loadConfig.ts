@@ -1,9 +1,13 @@
 import { Config } from './interfaces'
 import { log } from './log'
 
-export function loadConfig(p: string): Config {
+function normalizeConfig(config: Config): Config[] {
+  return Array.isArray(config) ? config : [config]
+}
+
+export function loadConfig(p: string): Config[] {
   try {
-    const config = require(p)
+    const config = normalizeConfig(require(p))
     return config
   } catch (e) {
     if (e.code !== 'MODULE_NOT_FOUND') {

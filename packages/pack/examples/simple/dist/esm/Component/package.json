@@ -1,0 +1,8 @@
+{
+  "sideEffects": [
+    "*.css",
+    "*@desktop.js",
+    "*@touch-phone.js",
+    "*@touch-pad.js"
+  ]
+}

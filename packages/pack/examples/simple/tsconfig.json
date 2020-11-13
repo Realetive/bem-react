@@ -2,7 +2,6 @@
   "compilerOptions": {
     /* Basic Options */
     "rootDir": "./src",
-    "outDir": "./lib",
     "moduleResolution": "node",
     "target": "ES2017",
     "module": "CommonJS",
@@ -17,8 +16,5 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true
-  },
-  "include": [
-    "src/**/*.ts"
-  ]
+  }
 }

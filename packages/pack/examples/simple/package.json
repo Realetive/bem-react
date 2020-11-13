@@ -1,0 +1,9 @@
+{
+  "name": "simpl",
+  "scripts": {
+    "build": "../../bin/pack build"
+  },
+  "devDependencies": {
+    "typescript": "3.9.7"
+  }
+}
