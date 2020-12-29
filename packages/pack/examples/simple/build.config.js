@@ -5,31 +5,11 @@ const { useTypeScriptPlugin } = require('../../lib/plugins/TypeScriptPlugin')
 /**
  * @type {import('@bem-react/pack/lib/interfaces').Config}
  */
-module.exports = [
-  {
-    output: './dist',
+module.exports = {
+  output: './build',
 
-    plugins: [
-      useCleanUpPlugin(['./dist']),
-
-      useTypeScriptPlugin({
-        replace: {
-          'process.env.NODE_ENV': JSON.stringify('d312ev'),
-        },
-      }),
-    ],
-  },
-  {
-    output: './build',
-
-    plugins: [
-      useCleanUpPlugin(['./build']),
-
-      useTypeScriptPlugin({
-        replace: {
-          'process.env.NODE_ENV': JSON.stringify('d312ev'),
-        },
-      }),
-    ],
-  },
-]
+  plugins: [
+    useCleanUpPlugin(['./build']),
+    useTypeScriptPlugin(),
+  ],
+}
