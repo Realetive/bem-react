@@ -1,11 +1,12 @@
 import { resolve } from 'path'
-import render from 'log-update'
+import render1 from 'log-update'
 import chalk from 'chalk'
 import { performance } from 'perf_hooks'
 
 import { Config, HookOptions } from './interfaces'
 import { wrapToPromise } from './wrapToPromise'
-
+// disable enter press???
+const render = render1.create(process.stdout, { showCursor: true })
 const steps = ['onStart', 'onBeforeRun', 'onRun', 'onAfterRun', 'onFinish']
 const frames = [
   "∙∙∙",
